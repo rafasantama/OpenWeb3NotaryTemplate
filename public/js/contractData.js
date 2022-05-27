@@ -1,7 +1,6 @@
 var abi;
 var contractAddress;
 
-// Link to Deployed Contract in Mumbai Polygon Testnet : https://mumbai.polygonscan.com/address/0x5FE831af8A790e73D93f4116a7Cc182c8a5C53E6
 
 abi = [{
         "inputs": [],
@@ -200,4 +199,4 @@ abi = [{
     }
 ];
 
-contractAddress = '0x5FE831af8A790e73D93f4116a7Cc182c8a5C53E6';
+contractAddress = '0xCd93faD5117AB867517187A6866309128aB1815E';

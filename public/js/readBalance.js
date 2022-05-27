@@ -17,16 +17,16 @@ const provider = new ethers.providers.Web3Provider(window.ethereum, "any");
 await provider.send("eth_requestAccounts", []);
 const signer = provider.getSigner();
 
-let maticBalance = (await signer.getBalance());
-console.log("El balance de matic es: " + await metamaskConfig.getBalance());
-console.log((maticBalance));
-document.getElementById("maticBalance").innerHTML = (maticBalance/1e18).toFixed(3) + ' MATIC';
+let nativeBalance = (await signer.getBalance());
+console.log("El balance de Celo es: " + await metamaskConfig.getBalance());
+console.log((nativeBalance));
+document.getElementById("nativeBalance").innerHTML = (nativeBalance/1e18).toFixed(3) + ' Celo';
 
 // event triggered when account is changed in metamask
 ethereum.on('accountsChanged', async(accounts) => {
     console.log('Account changed from', account)
     account.innerHTML = await metamaskConfig.getAccount()
-    maticBalance.innerHTML = await metamaskConfig.getBalance()
+    nativeBalance.innerHTML = await metamaskConfig.getBalance()
 
 })
 
